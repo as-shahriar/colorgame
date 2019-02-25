@@ -247,7 +247,6 @@ op4.style.background = solidcolor;
 op5.style.background = solidcolor;
 op6.style.background = solidcolor;
 
-console.log(opcolor);
 
 op1.style.pointerEvents = "auto";
 op2.style.pointerEvents = "auto";
