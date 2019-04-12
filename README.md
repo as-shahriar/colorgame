@@ -1,2 +1,2 @@
-# <a href="https://asifo1.github.io/colorgame/" target="_bliank">colorgame</a>
+# <a href="https://asifo1.github.io/colorgame/" target="_blank">colorgame</a>
 Simple color finding game using Html, CSS and JavaScript.
