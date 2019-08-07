@@ -100,6 +100,7 @@ function randomcolor() {
     opcolor[5] = selectedcolor;
     solidcolor = setcolor();
   }
+  //console.log(x+1);   //result in the console
 }
 
 function setop1color() {
@@ -201,15 +202,15 @@ function found(sc){
   result.style.display="inline";
   next.style.display="inline";
   if(sc==5)
-  result.textContent = "Bravo!! You got "+sc+" points";
+  result.textContent = "Bravo!! You got "+sc*10+" points";
   else if(sc==4)
-  result.textContent = "Excellent!! You got "+sc+" points";
+  result.textContent = "Excellent!! You got "+sc*10+" points";
   else if(sc==3)
-  result.textContent = "Well Done!! You got "+sc+" points";
+  result.textContent = "Well Done!! You got "+sc*10+" points";
   else if(sc==2)
-  result.textContent = "Good!! You got "+sc+" points";
+  result.textContent = "Good!! You got "+sc*10+" points";
   else if(sc==1)
-  result.textContent = "Ohh!! You got "+sc+" point";
+  result.textContent = "Ohh!! You got "+sc*10+" point";
   else if(sc==0)
   result.textContent = "Better Luck Next Time";
 
@@ -222,8 +223,11 @@ function found(sc){
   op4.style.pointerEvents = "none";
   op5.style.pointerEvents = "none";
   op6.style.pointerEvents = "none";
-  scorenum+=sc;
+  scorenum+=sc*10;
   score.textContent = scorenum;
+  eventcount = eventcount+1;
+  counts.textContent = eventcount;
+  avg.textContent = (scorenum/eventcount).toFixed(1);;
 
 
 
@@ -237,8 +241,10 @@ var op5 = document.getElementById('op5');
 var op6 = document.getElementById('op6');
 var qusColor = document.getElementById('quscolor');
 var score = document.getElementById('scorenum');
+var counts = document.getElementById('count');
 var result = document.getElementById('result');
 var nextbut = document.getElementById('next');
+var avg = document.getElementById('avg');
 var scorenum = 0;
 
 
@@ -249,7 +255,7 @@ var rand;
 var selectedcolor;
 var clickbool = [];
 var solidcolor;
-
+var eventcount=0;
 function main(){
 list=[];
 opcolor=[];
@@ -260,6 +266,9 @@ qusColor.style.background = selectedcolor;
 result.style.display="none";
 next.style.display="none";
 randomcolor();
+
+
+
 
 
 
@@ -285,5 +294,7 @@ op4.addEventListener("click", setop4color);
 op5.addEventListener("click", setop5color);
 op6.addEventListener("click", setop6color);
 nextbut.addEventListener("click",main);
+
+
 }
 main();

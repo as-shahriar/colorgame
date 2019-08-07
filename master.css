@@ -34,7 +34,7 @@ body{
 
 .score{
   float: right;
-
+  padding-right: 20px;
 
 }
 .scoreinline{
