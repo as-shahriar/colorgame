@@ -94,3 +94,8 @@ margin-left: 70px;
 #next:hover{
     background-color:#f15a22;
 }
+
+
+.sound{
+  display: none;
+}

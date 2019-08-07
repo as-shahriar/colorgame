@@ -10,6 +10,22 @@ var colors = ["#cf000f",
 
 
 
+var musicr = document.getElementById("myAudior");
+var musicw = document.getElementById("myAudiow");
+musicr.style.display="none";
+musicw.style.display="none";
+
+function playAudior() {
+  musicr.play();
+}
+
+function playAudiow() {
+  musicw.play();
+}
+
+
+
+
 function myrandom() {
   return Math.floor(Math.random() * colors.length);
 }
@@ -91,8 +107,9 @@ function setop1color() {
   clickbool[0] = true;
   autorevel();
   if(opcolor[0]==selectedcolor){
-    found(6-autorevel());
+    return found(6-autorevel());
   }
+  playAudiow();
 
 }
 
@@ -101,8 +118,9 @@ function setop2color() {
   clickbool[1] = true;
   autorevel();
   if(opcolor[1]==selectedcolor){
-    found(6-autorevel());
+    return found(6-autorevel());
   }
+  playAudiow();
 }
 
 function setop3color() {
@@ -110,8 +128,9 @@ function setop3color() {
   clickbool[2] = true;
   autorevel();
   if(opcolor[2]==selectedcolor){
-    found(6-autorevel());
+    return found(6-autorevel());
   }
+  playAudiow();
 }
 
 function setop4color() {
@@ -119,8 +138,9 @@ function setop4color() {
   clickbool[3] = true;
   autorevel();
   if(opcolor[3]==selectedcolor){
-    found(6-autorevel());
+    return found(6-autorevel());
   }
+  playAudiow();
 }
 
 function setop5color() {
@@ -128,8 +148,9 @@ function setop5color() {
   clickbool[4] = true;
   autorevel();
   if(opcolor[4]==selectedcolor){
-    found(6-autorevel());
+    return found(6-autorevel());
   }
+  playAudiow();
 }
 
 function setop6color() {
@@ -137,8 +158,9 @@ function setop6color() {
   clickbool[5] = true;
   autorevel();
   if(opcolor[5]==selectedcolor){
-    found(6-autorevel());
+    return found(6-autorevel());
   }
+  playAudiow();
 }
 
 function autorevel(){
@@ -175,6 +197,7 @@ function autorevel(){
 }
 
 function found(sc){
+  playAudior();
   result.style.display="inline";
   next.style.display="inline";
   if(sc==5)

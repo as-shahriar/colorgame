@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<audio id="myAudio">
+  <source src="sounds/harpsichord.ogg" type="audio/ogg">
+  
+</audio>
+
+<p>Click the buttons to play or pause the audio.</p>
+
+<script>
+var x = document.getElementById("myAudio"); 
+
+function playAudio() { 
+  x.play(); 
+} 
+
+function pauseAudio() { 
+  x.pause(); 
+} 
+
+playAudio();
+</script>
+
+</body>
+</html>
